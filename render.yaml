@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tea-order-server
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    # 免费计划：不活跃15分钟后会休眠，首次请求会有约30秒冷启动延迟
+    # 如需保持活跃，可升级付费计划或配置定时 ping
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000

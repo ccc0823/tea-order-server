@@ -1,0 +1,5 @@
+node_modules/
+db/orders.db
+db/*.db-shm
+db/*.db-wal
+.env
